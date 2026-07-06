@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/retention-mastery/">
+<!-- BASE:END -->
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+
+<!-- SEO Meta Tags -->
+<title>Retention Mastery: Special Ops Training</title>
+<meta name="description" content="The retention playbook from 8 years in the trenches. First Special Ops Training since 2021." />
+<meta name="keywords" content="Retention " />
+<meta property="og:title" content="Retention Mastery: Special Ops Training" />
+<meta property="og:description" content="The retention playbook from 8 years in the trenches. First Special Ops Training since 2021." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Retention Mastery: Special Ops Training" />
+<meta name="twitter:description" content="The retention playbook from 8 years in the trenches. First Special Ops Training since 2021." />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mqa8xw2g-pnc45";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  var u=new URL(location.href);var found=null;var changed=false;
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{localStorage.setItem(map[p]+slug,v);}catch(e){}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4740');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='9cCHSYumPT';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='9cCHSYumPT';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="cursor-dot" id="cursorDot" data-section="cursor"></div>
+<div class="cursor-ring" id="cursorRing" data-section="cursor"></div>
+<nav data-section="navbar"><div class="nav-logo">Retention<span>Mastery</span></div><div class="nav-tag">Special Ops Training</div></nav>
+<section class="hero" data-section="hero">
+  <div class="hero-eyebrow">First Special Ops Training Since 2021</div>
+  <h1 class="hero-headline">Access the Lessons<br>from <span class="gold">8 Years</span><br>in the Trenches</h1>
+  <p class="hero-sub">The retention playbook, built from real life experience, real results<br>and years of execution.<br>Not a course. A transfer of knowledge.</p>
+  <div class="hero-video-wrap" id="heroVideoWrap">
+    <iframe src="https://app.heygen.com/embeds/e9db96a8c3a14905881ae68ef7371fed" title="Retention Mastery - SpecialOps" frameborder="0" allow="encrypted-media; fullscreen;" allowfullscreen></iframe>
+  </div>
+  <div class="hero-cta-row"><a href="#optin" class="btn-primary"><span>Secure My Spot</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a></div>
+  <div class="hero-stat-row">
+    <div class="stat"><div class="stat-num">8</div><span class="stat-label">Live Sessions</span></div>
+    <div class="stat"><div class="stat-num">8</div><span class="stat-label">Days</span></div>
+    <div class="stat"><div class="stat-num">2</div><span class="stat-label">Languages</span></div>
+    <div class="stat"><div class="stat-num">30-Day</div><span class="stat-label">Sales Bootcamp</span></div>
+    <div class="stat"><div class="stat-num">0%</div><span class="stat-label">Fluff</span></div>
+  </div>
+</section>
+<section class="problem" data-section="problem"><div class="container"><div class="reveal">
+  <div class="section-label">The Real Problem</div>
+  <h2 class="section-title">Every Agency is Now an "AI Agency".<br>They sound the same and no one<br>CAN TELL THEM APART</h2>
+  <p class="problem-intro">With the cost of development dropping, generalists are popping up everywhere. They're competing on price while their voice gets drowned by the noise of big claims and little results. Retention Mastery is your chance to stay ahead of the pack and dive into a blue ocean of opportunity where clients are willing to retain you as a valuable extension to their team. A specialist.</p>
+</div></div></section>
+<section class="solution" data-section="solution"><div class="container">
+  <div class="solution-grid reveal">
+  <div class="solution-left">
+    <div class="section-label">The Program</div>
+    <h2 class="section-title">Retention Mastery<br>Special Ops<br>Training</h2>
+    <p>Every system, every tactic that made each strategy turn strangers into loyal brand ambassadors.</p>
+    <p>8 days, 8 sessions, no theory, zero fluff. All hands on, LIVE!</p>
+  </div>
+  <div class="solution-right"><ul class="process-list">
+    <li class="process-item"><div>
+      <div class="process-title">Day 1. Why Retention?</div>
+      <ul class="sub-list">
+        <li>The sales funnel, redefined</li>
+        <li>From generalist to specialist</li>
+        <li>Data tells a story - Case studies</li>
+      </ul>
+    </div></li>
+    <li class="process-item"><div>
+      <div class="process-title">Day 2. Loyalty Before Tech</div>
+      <ul class="sub-list">
+        <li>Unlocking consumer psychology</li>
+        <li>How digital wallets forge emotional ties</li>
+        <li>The most effective and untapped marketing channel</li>
+        <li>Nielsen's insights and big-brand programs</li>
+      </ul>
+    </div></li>
+    <li class="process-item"><div>
+      <div class="process-title">Day 3. The Legal Bedrock</div>
+      <p class="process-desc">Mastering loyalty program compliance.</p>
+    </div></li>
+    <li class="process-item"><div>
+      <div class="process-title">Day 4 &amp; 5. Implementing Basic and Advanced Programs With Today's Tech, featuring PMGT</div>
+    </div></li>
+    <li class="process-item"><div>
+      <div class="process-title">Day 6 &amp; 7. Membership Programs, Audience Growth Hacks, Smart Event Tickets &amp; Gamification</div>
+    </div></li>
+    <li class="process-item"><div>
+      <div class="process-title">Day 8. The Anatomy of a Program Launch. The $0 Ad Spend Tactic and The Money Is in The Losers Play.</div>
+    </div></li>
+  </ul></div>
+  </div>
+  <div class="completion-crest reveal"><img src="https://i.imgur.com/XeprC72.jpeg" alt="Retention Mastery Special Ops emblem" loading="lazy" style="background:transparent"/></div>
+  <div class="bootcamp-text">30-Day Sales Bootcamp<br>Upon Completion</div>
+</div></section>
+<section class="credibility" data-section="credibility"><div class="container"><div class="cred-grid reveal">
+  <div class="cred-left">
+    <div class="section-label">Your Instructor</div>
+    <h2 class="section-title">Danny<br>Monzon</h2>
+    <p>In too deep. Since 2018 I've been building chat automation systems with one goal in mind: Retention. Commonly known as Loyalty Programs.</p>
+    <p>E-commerce giants like CareTouch and NaturalSlim. A collaboration with Pedro Adao (10x Two Comma Club Award). Tens of restaurants. A mentee winning bot-building contests on two different platforms. Two consulting clients listed in the Inc. 5000 and an industry award.</p>
+    <p>The wins are documented and so are the mishaps. The bumps, the bruises and scars that nobody sees helped forge the lessons for this event.</p>
+  </div>
+  <div class="badge-card">
+    <div class="badge-photo"><img src="https://i.imgur.com/82d3Ijn.png" alt="Retention Mastery Special Ops Badge" loading="lazy"/></div>
+    <div class="badge-body">
+      <span class="badge-title-txt">Automation Specialist, Retention Strategist building tailor-made programs for clients and Agency Partners designed to increase AOV and reduce CPA. Founder of DM Digital and ChatLux AI.</span>
+    </div>
+  </div>
+</div></div></section>
+<section class="optin" id="optin" data-section="optin"><div class="container"><div class="optin-inner reveal">
+  <div class="section-label">Secure Your Spot</div>
+  <h2 class="section-title">First Retention Training<br>Since 2021</h2>
+  <p class="optin-sub">This is your one shot to get in front of this content being delivered live, first-hand, with added access to live support during the 30-day sales bootcamp and collaboration opportunities.<span class="register-line">Register and open that door.</span></p>
+  <div class="form-wrap">
+    <form id="optinForm" novalidate>
+      <div class="form-grid">
+        <div class="form-group"><label for="firstName">First Name</label><input type="text" id="firstName" placeholder="Danny" required/></div>
+        <div class="form-group"><label for="lastName">Last Name</label><input type="text" id="lastName" placeholder="Monzon" required/></div>
+        <div class="form-group"><label for="email">Business Email Address</label><input type="email" id="email" placeholder="danny@yourcompany.com" required/></div>
+        <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" placeholder="+1 (904) 555-0100" required/></div>
+      </div>
+      <div class="form-submit"><button type="submit" class="btn-primary" id="submitBtn"><span id="btnText">Get Instant Access</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button></div>
+      <p class="form-trust">No spam. No games. Your info is safe.</p>
+    </form>
+    <div class="form-success" id="formSuccess">
+      <h3>You're In.</h3>
+      <p>Welcome to Retention Mastery. Check your email for your exclusive access details and next steps.</p>
+    </div>
+  </div>
+</div></div></section>
+<section class="final-cta" data-section="cta">
+  <div class="section-label">Last Call</div>
+  <h2 class="section-title">The Game Changes Here</h2>
+  <p class="section-sub">The window is small. The first group gets in first, gets the bonuses, and gets the advantage no one else will ever have again.</p>
+  <a href="#optin" class="btn-primary"><span>Join Retention Mastery</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+  <div class="final-trust">Limited Spots. First Special Ops Training Since 2021. Join Now.</div>
+</section>
+<footer data-section="footer"><div class="footer-logo">Retention<span>Mastery</span></div><div class="footer-copy">2026 DannyMonzon.com. All rights reserved.</div></footer>
+<div class="ticker-wrap" data-section="ticker"><div class="ticker-inner"><span>Retention Mastery</span><span>Special Ops Training</span><span>First Since 2021</span><span>8 Years in the Trenches</span><span>8 Days of Training</span><span>Join Now</span><span>Retention Mastery</span><span>Special Ops Training</span><span>First Since 2021</span><span>8 Years in the Trenches</span><span>8 Days of Training</span><span>Join Now</span></div></div>
+<script>
+const WEBHOOK_URL="https://paymegpt.com/api/webhooks/flow/2666/bb816867b64f2cd8124d32d19d061195782e94b1234de41c7c730c29a53a39be";
+const FREE_EMAIL_DOMAINS=["gmail.com","yahoo.com","ymail.com","hotmail.com","outlook.com","live.com","msn.com","aol.com","icloud.com","me.com","mac.com","proton.me","protonmail.com","gmx.com","mail.com","zoho.com","yandex.com","pm.me","hey.com"];
+const dot=document.getElementById("cursorDot"),ring=document.getElementById("cursorRing");
+let mouseX=0,mouseY=0,ringX=0,ringY=0;
+document.addEventListener("mousemove",e=>{mouseX=e.clientX;mouseY=e.clientY;dot.style.left=mouseX+"px";dot.style.top=mouseY+"px";});
+(function lerp(){ringX+=(mouseX-ringX)*.12;ringY+=(mouseY-ringY)*.12;ring.style.left=ringX+"px";ring.style.top=ringY+"px";requestAnimationFrame(lerp);})();
+document.querySelectorAll("a,button,.pill").forEach(el=>{el.addEventListener("mouseenter",()=>{ring.style.width="52px";ring.style.height="52px";ring.style.opacity=".5";});el.addEventListener("mouseleave",()=>{ring.style.width="32px";ring.style.height="32px";ring.style.opacity="1";});});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}});},{threshold:0.1});
+document.querySelectorAll(".reveal").forEach(r=>obs.observe(r));
+document.querySelectorAll("a[href^='#']").forEach(a=>{a.addEventListener("click",e=>{e.preventDefault();const t=document.querySelector(a.getAttribute("href"));if(t)t.scrollIntoView({behavior:"smooth",block:"start"});});});
+function isBusinessEmail(email){
+  const m=email.toLowerCase().match(/^[^@\s]+@([^@\s]+\.[^@\s]+)$/);
+  if(!m)return false;
+  return !FREE_EMAIL_DOMAINS.includes(m[1]);
+}
+document.getElementById("optinForm").addEventListener("submit",async function(e){
+  e.preventDefault();
+  const firstName=document.getElementById("firstName").value.trim();
+  const lastName=document.getElementById("lastName").value.trim();
+  const email=document.getElementById("email").value.trim();
+  const phone=document.getElementById("phone").value.trim();
+  if(!firstName||!email||!phone){alert("Please fill in all required fields.");return;}
+  if(!isBusinessEmail(email)){alert("Please use your business email address (no Gmail, Yahoo, Outlook, etc.).");document.getElementById("email").focus();return;}
+  const btn=document.getElementById("submitBtn");
+  const btnText=document.getElementById("btnText");
+  btn.disabled=true;btnText.textContent="Sending...";
+  const cleanPhone=phone.replace(/\D/g,"");const e164Phone="+"+cleanPhone;
+  try{const resp=await fetch(WEBHOOK_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({contactName:(firstName+" "+lastName).trim(),contactEmail:email,contactPhone:e164Phone,data:{source:"rm-lander-en"}})});if(!resp.ok){console.error("Webhook error:",resp.status,resp.statusText);alert("Error submitting form. Please try again.");btn.disabled=false;btnText.textContent="Get Instant Access";return;}}catch(err){console.error("Fetch error:",err);alert("Connection error. Please try again.");btn.disabled=false;btnText.textContent="Get Instant Access";return;}
+  document.getElementById("optinForm").style.display="none";
+  document.getElementById("formSuccess").style.display="block";
+});
+</script>
+</body>
+</html>
