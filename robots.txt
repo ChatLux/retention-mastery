@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ChatLux.github.io/retention-mastery/sitemap.xml
+Sitemap: https://joinretentionmastery.com/sitemap.xml
