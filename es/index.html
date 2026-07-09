@@ -327,59 +327,11 @@
   <div class="section-label">Asegura tu Lugar</div>
   <h2 class="section-title">Primer Entrenamiento de Retención<br>Desde 2021</h2>
   <p class="optin-sub">Esta es tu única oportunidad de estar frente a este contenido en vivo, de primera mano, con acceso adicional a soporte en vivo durante el bootcamp de ventas de 30 días y oportunidades de colaboración.<span class="register-line">Regístrate y abre esa puerta.</span></p>
-  <div class="form-wrap">
-    <form id="optinForm" novalidate>
-      <div class="form-grid">
-        <div class="form-group"><label for="nombre">Nombre</label><input type="text" id="nombre" placeholder="Juan" required/></div>
-        <div class="form-group"><label for="apellido">Apellido</label><input type="text" id="apellido" placeholder="Pérez" required/></div>
-        <div class="form-group" style="grid-column:1/-1"><label for="email">Email Empresarial</label><input type="email" id="email" placeholder="juan@tuempresa.com" required/></div>
-        <div class="form-group" style="grid-column:1/-1"><label for="phone">Teléfono</label><input type="tel" id="phone" placeholder="+1 (904) 555-0100" required/></div>
-      </div>
-      <div class="form-submit"><button type="submit" class="btn-primary" id="submitBtn"><span id="btnText">Obtener Acceso Ahora</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button></div>
-      <p class="form-trust">Sin spam. Sin juegos. Tu info está segura.</p>
-    </form>
-    <div class="form-success" id="formSuccess">
-      <h3>Estás Dentro.</h3>
-      <p>Bienvenido a Mastería en Retención. Revisa tu email para tus detalles de acceso exclusivo y próximos pasos.</p>
-    </div>
-  </div>
+  <div style="margin-top:48px"><a href="https://paymegpt.com/wallet/join/af83eefed4b8b3fb5a44734e04efd9bcf327226cadc40d39f2d56624663bd0de" class="btn-primary"><span>Obtener Acceso Ahora</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a><p class="form-trust" style="margin-top:48px">Sin spam. Sin juegos. Tu info está segura.</p></div>
 </div></div></section>
 <footer data-section="footer"><div class="footer-logo">Mastería en<span>Retención</span></div><div class="footer-copy">2026 DannyMonzon.com. Todos los derechos reservados.</div></footer>
 <div class="ticker-wrap" data-section="ticker"><div class="ticker-inner"><span>Mastería en Retención</span><span>Entrenamiento Special Ops</span><span>Primer Desde 2021</span><span>8 Años en el Terreno</span><span>8 Días de Entrenamiento</span><span>Únete Ahora</span><span>Mastería en Retención</span><span>Entrenamiento Special Ops</span><span>Primer Desde 2021</span><span>8 Años en el Terreno</span><span>8 Días de Entrenamiento</span><span>Únete Ahora</span></div></div>
-<script>
-const WEBHOOK_URL="https://paymegpt.com/api/webhooks/flow/7xs47r5b/62b71fc242efeb20406bca877a6975f57ddc378e3a05e5d365594d3a5ceec96d";
-const WALLET_URL="https://paymegpt.com/wallet/join/af83eefed4b8b3fb5a44734e04efd9bcf327226cadc40d39f2d56624663bd0de";
-const FREE_EMAIL_DOMAINS=["gmail.com","yahoo.com","ymail.com","hotmail.com","outlook.com","live.com","msn.com","aol.com","icloud.com","me.com","mac.com","proton.me","protonmail.com","gmx.com","mail.com","zoho.com","yandex.com","pm.me","hey.com"];
-const dot=document.getElementById("cursorDot"),ring=document.getElementById("cursorRing");
-let mouseX=0,mouseY=0,ringX=0,ringY=0;
-document.addEventListener("mousemove",e=>{mouseX=e.clientX;mouseY=e.clientY;dot.style.left=mouseX+"px";dot.style.top=mouseY+"px";});
-(function lerp(){ringX+=(mouseX-ringX)*.12;ringY+=(mouseY-ringY)*.12;ring.style.left=ringX+"px";ring.style.top=ringY+"px";requestAnimationFrame(lerp);})();
-document.querySelectorAll("a,button,.pill").forEach(el=>{el.addEventListener("mouseenter",()=>{ring.style.width="52px";ring.style.height="52px";ring.style.opacity=".5";});el.addEventListener("mouseleave",()=>{ring.style.width="32px";ring.style.height="32px";ring.style.opacity="1";});});
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}});},{threshold:0.1});
-document.querySelectorAll(".reveal").forEach(r=>obs.observe(r));
-document.querySelectorAll("a[href^='#']").forEach(a=>{a.addEventListener("click",e=>{e.preventDefault();const t=document.querySelector(a.getAttribute("href"));if(t)t.scrollIntoView({behavior:"smooth",block:"start"});});});
-function isBusinessEmail(email){
-  const m=email.toLowerCase().match(/^[^@\s]+@([^@\s]+\.[^@\s]+)$/);
-  if(!m)return false;
-  return !FREE_EMAIL_DOMAINS.includes(m[1]);
-}
-document.getElementById("optinForm").addEventListener("submit",async function(e){
-  e.preventDefault();
-  const nombre=document.getElementById("nombre").value.trim();
-  const apellido=document.getElementById("apellido").value.trim();
-  const email=document.getElementById("email").value.trim();
-  const phone=document.getElementById("phone").value.trim();
-  if(!nombre||!email||!phone){alert("Por favor completa todos los campos requeridos.");return;}
-  if(!isBusinessEmail(email)){alert("Por favor usa tu email empresarial (sin Gmail, Yahoo, Outlook, etc.).");document.getElementById("email").focus();return;}
-  const btn=document.getElementById("submitBtn");
-  const btnText=document.getElementById("btnText");
-  btn.disabled=true;btnText.textContent="Enviando...";
-  const fullName=(nombre+" "+apellido).trim();
-  const cleanPhone=phone.replace(/\D/g,"");const e164Phone="+"+cleanPhone;
-  try{const resp=await fetch(WEBHOOK_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({contactName:fullName,contactEmail:email,contactPhone:e164Phone,data:{source:"rm-lander-es"}})});if(!resp.ok){console.error("Webhook error:",resp.status,resp.statusText);alert("Error enviando formulario. Intenta de nuevo.");btn.disabled=false;btnText.textContent="Obtener Acceso Ahora";return;}}catch(err){console.error("Fetch error:",err);alert("Error de conexión. Intenta de nuevo.");btn.disabled=false;btnText.textContent="Obtener Acceso Ahora";return;}
-  const walletURL=WALLET_URL+"?name="+encodeURIComponent(fullName)+"&email="+encodeURIComponent(email)+"&phone="+encodeURIComponent(e164Phone);
-  setTimeout(()=>{window.location.href=walletURL;},500);
-});
-</script>
+
+  <script src="script.js"></script>
 </body>
 </html>
