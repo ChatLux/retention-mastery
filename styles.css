@@ -48,9 +48,9 @@ section{padding:100px 48px}
 .process-item:first-child{border-top:1px solid var(--border)}
 .process-item:hover{padding-left:12px}
 .process-title{font-size:22px;font-weight:600;margin-bottom:8px;color:var(--text)}
-.process-desc{font-size:21px;color:var(--text);line-height:1.65}
+.process-desc{font-size:21px;color:var(--text);line-height:1.55;margin:0}
 .sub-list{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:6px}
-.sub-list li{font-size:21px;color:var(--text);padding-left:14px;position:relative;line-height:1.5}
+.sub-list li{font-size:21px;color:var(--text);padding-left:14px;position:relative;line-height:1.55}
 .sub-list li::before{content:"";position:absolute;left:0;top:13px;width:5px;height:1px;background:var(--accent)}
 .credibility{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
