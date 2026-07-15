@@ -310,7 +310,7 @@
 <section class="hero" data-section="hero">
   <div class="hero-eyebrow">Primer Entrenamiento Special Ops Desde 2021</div>
   <h1 class="hero-headline">Accede a las Lecciones<br>de <span class="gold">8 Años</span><br>en el Terreno</h1>
-  <p class="hero-sub">El manual de retención, construido desde la experiencia real, resultados reales<br>y años de ejecución.<br>No es un curso. Es una transferencia de conocimiento.</p>
+  <p class="hero-sub">El manual de retención, construido desde experiencia real, resultados reales<br>y años de ejecución.<br>No es un curso. Es una transferencia de conocimiento.</p>
   <div class="hero-video-wrap" id="heroVideoWrap">
     <iframe src="https://app.heygen.com/embeds/e9db96a8c3a14905881ae68ef7371fed" title="Mastería en Retención - SpecialOps" frameborder="0" allow="encrypted-media; fullscreen;" allowfullscreen></iframe>
   </div>
@@ -326,7 +326,7 @@
 <section class="problem" data-section="problem"><div class="container"><div class="reveal">
   <div class="section-label">El Verdadero Problema</div>
   <h2 class="section-title">Toda Agencia es Ahora una "Agencia de IA".<br>Suenen Igual y Nadie<br>PUEDE DIFERENCIARLAS</h2>
-  <p class="problem-intro">Con el costo del desarrollo cayendo, especialistas en todo generan nuevas oportunidades. Compiten por precio mientras su voz se ahoga en el ruido de grandes reclamaciones y pocos resultados. Mastería en Retención es tu oportunidad para estar adelante del juego y sumergirte en un océano azul donde los clientes están dispuestos a retenerte como una valiosa extensión de tu equipo. Un especialista.</p>
+  <p class="problem-intro">Con el costo del desarrollo cayendo, especialistas en todo generan nuevas oportunidades. Compiten por precio mientras su voz se ahoga en el ruido de grandes reclamaciones y pocos resultados. Mastería en Retención es tu oportunidad para estar adelante del juego y sumergirte en un océano azul donde los clientes están dispuestos a retenerte como una valiosa extensión de tu equipo. Un Especialista.</p>
 </div></div></section>
 <section class="solution" data-section="solution"><div class="container">
   <div class="solution-grid reveal">
@@ -375,7 +375,7 @@
   </ul></div>
   </div>
   <div class="completion-crest reveal"><img src="https://i.imgur.com/XeprC72.jpeg" alt="Emblema Mastería en Retención Special Ops" loading="lazy" style="background:transparent"/></div>
-  <div class="bootcamp-text">30-Día Bootcamp de Ventas<br>Al Completar</div>
+  <div class="bootcamp-text">30-Día Bootcamp de Ventas<br>Gana Tus Galones</div>
 </div></section>
 <section class="credibility" data-section="credibility"><div class="container"><div class="cred-grid reveal">
   <div class="cred-left">
@@ -435,7 +435,7 @@ const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersec
 document.querySelectorAll(".reveal").forEach(r=>obs.observe(r));
 document.querySelectorAll("a[href^='#']").forEach(a=>{a.addEventListener("click",e=>{e.preventDefault();const t=document.querySelector(a.getAttribute("href"));if(t)t.scrollIntoView({behavior:"smooth",block:"start"});});});
 function isBusinessEmail(email){
-  const m=email.toLowerCase().match(/^[^@\\s]+@([^@\\s]+\\.[^@\\s]+)$/);
+  const m=email.toLowerCase().match(/^[^@\s]+@([^@\s]+\.[^@\s]+)$/);
   if(!m)return false;
   return !FREE_EMAIL_DOMAINS.includes(m[1]);
 }
@@ -450,7 +450,7 @@ document.getElementById("optinForm").addEventListener("submit",async function(e)
   const btn=document.getElementById("submitBtn");
   const btnText=document.getElementById("btnText");
   btn.disabled=true;btnText.textContent="Enviando...";
-  const cleanPhone=phone.replace(/\\D/g,"");const e164Phone="+"+cleanPhone;
+  const cleanPhone=phone.replace(/\D/g,"");const e164Phone="+"+cleanPhone;
   try{const resp=await fetch(WEBHOOK_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({contactName:(firstName+" "+lastName).trim(),contactEmail:email,contactPhone:e164Phone,data:{source:"rm-lander-es"}})});if(!resp.ok){console.error("Error de webhook:",resp.status,resp.statusText);alert("Error al enviar formulario. Por favor, intenta de nuevo.");btn.disabled=false;btnText.textContent="Obtener Acceso Instantáneo";return;}}catch(err){console.error("Error de obtención:",err);alert("Error de conexión. Por favor, intenta de nuevo.");btn.disabled=false;btnText.textContent="Obtener Acceso Instantáneo";return;}
   document.getElementById("optinForm").style.display="none";
   document.getElementById("formSuccess").style.display="block";
