@@ -327,7 +327,7 @@
 <section class="problem" data-section="problem"><div class="container"><div class="reveal">
   <div class="section-label">The Real Problem</div>
   <h2 class="section-title">Every Agency is Now an "AI Agency".<br>They sound the same and no one<br>CAN TELL THEM APART</h2>
-  <p class="problem-intro">With the cost of development dropping, generalists are popping up everywhere. They're competing on price while their voice gets drowned by the noise of big claims and little results. Retention Mastery is your chance to stay ahead of the pack and dive into a blue ocean of opportunity where clients are willing to retain you as a valuable extension to their team. A specialist.</p>
+  <p class="problem-intro">With the cost of development dropping, generalists are popping up everywhere. They're competing on price while their voice gets drowned by the noise of big claims and little results. Retention Mastery is your chance to stay ahead of the pack and dive into a blue ocean of opportunity where clients are willing to retain you as a valuable extension to their team. A Specialist.</p>
 </div></div></section>
 <section class="solution" data-section="solution"><div class="container">
   <div class="solution-grid reveal">
@@ -376,7 +376,7 @@
   </ul></div>
   </div>
   <div class="completion-crest reveal"><img src="https://i.imgur.com/XeprC72.jpeg" alt="Retention Mastery Special Ops emblem" loading="lazy" style="background:transparent"/></div>
-  <div class="bootcamp-text">30-Day Sales Bootcamp<br>Upon Completion</div>
+  <div class="bootcamp-text">30-Day Sales Bootcamp<br>Earn Your Stripes</div>
 </div></section>
 <section class="credibility" data-section="credibility"><div class="container"><div class="cred-grid reveal">
   <div class="cred-left">
@@ -436,7 +436,7 @@ const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersec
 document.querySelectorAll(".reveal").forEach(r=>obs.observe(r));
 document.querySelectorAll("a[href^='#']").forEach(a=>{a.addEventListener("click",e=>{e.preventDefault();const t=document.querySelector(a.getAttribute("href"));if(t)t.scrollIntoView({behavior:"smooth",block:"start"});});});
 function isBusinessEmail(email){
-  const m=email.toLowerCase().match(/^[^@\\s]+@([^@\\s]+\\.[^@\\s]+)$/);
+  const m=email.toLowerCase().match(/^[^@\s]+@([^@\s]+\.[^@\s]+)$/);
   if(!m)return false;
   return !FREE_EMAIL_DOMAINS.includes(m[1]);
 }
@@ -451,7 +451,7 @@ document.getElementById("optinForm").addEventListener("submit",async function(e)
   const btn=document.getElementById("submitBtn");
   const btnText=document.getElementById("btnText");
   btn.disabled=true;btnText.textContent="Sending...";
-  const cleanPhone=phone.replace(/\\D/g,"");const e164Phone="+"+cleanPhone;
+  const cleanPhone=phone.replace(/\D/g,"");const e164Phone="+"+cleanPhone;
   try{const resp=await fetch(WEBHOOK_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({contactName:(firstName+" "+lastName).trim(),contactEmail:email,contactPhone:e164Phone,data:{source:"rm-lander-en"}})});if(!resp.ok){console.error("Webhook error:",resp.status,resp.statusText);alert("Error submitting form. Please try again.");btn.disabled=false;btnText.textContent="Get Instant Access";return;}}catch(err){console.error("Fetch error:",err);alert("Connection error. Please try again.");btn.disabled=false;btnText.textContent="Get Instant Access";return;}
   document.getElementById("optinForm").style.display="none";
   document.getElementById("formSuccess").style.display="block";
